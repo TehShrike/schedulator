@@ -1,0 +1,25 @@
+{
+  "name": "schedulator",
+  "version": "1.0.0",
+  "description": "An app for deciding who should work next",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js",
+    "watch": "watchify index.js -o build.js -d",
+    "build": "browserify index.js | uglifyjs -m > build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TehShrike/schedulator.git"
+  },
+  "author": "TehShrike",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/TehShrike/schedulator/issues"
+  },
+  "homepage": "https://github.com/TehShrike/schedulator",
+  "dependencies": {
+    "ractive": "^0.4.0",
+    "schedulator": "^1.0.0"
+  }
+}
