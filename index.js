@@ -48,12 +48,12 @@ function getListOfWorkers() {
 function figureOutNextSchedule() {
 	var sorter = new Sorter()
 	history.forEach(function(oneWeeksJobs) {
-		console.log("This was a week that happened", oneWeeksJobs)
-		sorter.thingHappened(oneWeeksJobs.a)
-		sorter.thingHappened(oneWeeksJobs.b)
+		sorter.priorWork(oneWeeksJobs.a)
+		sorter.priorWork(oneWeeksJobs.b)
 	})
-	var nextWeek = sorter.nextSchedule(['a', 'b'], getListOfWorkers())
+	var nextWeek = sorter.getNextSchedule(['a', 'b'], getListOfWorkers())
 	history.push(nextWeek)
 }
 
 window.figureOutNextSchedule = figureOutNextSchedule
+window.getListOfWorkers = getListOfWorkers
