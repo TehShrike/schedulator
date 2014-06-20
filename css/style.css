@@ -1,3 +1,7 @@
 div#listOfWorkers textarea {
 	height: 500px;
 }
+
+#main {
+	padding-top: 30px;
+}
