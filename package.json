@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TehShrike/schedulator",
   "dependencies": {
+    "dom-style": "0.0.2",
     "ractive": "^0.4.0",
     "schedulator": "^1.0.0"
   }

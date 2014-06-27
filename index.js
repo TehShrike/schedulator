@@ -1,36 +1,16 @@
 var Menu = require('./ractive-menu.js')
+var configScreen = require('./config-screen.js')
 
-var menu = new Menu('main', [
-	{ identifier: 'main', display: "Main"},
+var menu = new Menu('schedule', [
+	{ identifier: 'schedule', display: "Main"},
 	{ identifier: 'config', display: "Configuration" },
 	{ identifier: 'export', display: "Export" }
 ])
-
-var mainContentArea = new Ractive({
-	el: 'big-box-o-content',
-	template: '#ractive-main',
-	data: {
-		current: 'main'
-	}
-})
-
-menu.on('change', function(newScreen) {
-	mainContentArea.set('current', newScreen)
-})
-
 
 // var Sorter = require('schedulator-sorter')
 // var Ractive = require('ractive')
 
 // var history = []
-
-// var listOfWorkersTextBox = new Ractive({
-// 	el: '#listOfWorkers',
-// 	data: {
-// 		bigTextBlock: ""
-// 	},
-// 	template: '<textarea value="{{bigTextBlock}}"></textarea>'
-// })
 
 // new Ractive({
 // 	el: '#history',

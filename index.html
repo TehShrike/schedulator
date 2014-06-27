@@ -28,21 +28,27 @@
     {{/list}}
 </script>
 
-<script id='ractive-main' type='text/ractive'>
+<script id='ractive-config' type='text/ractive'>
+<span>
+    <label for="workers-textarea">Workers</label>
+    <textarea value="{{workers}}"></textarea>
+</span>
 
-{{# current == 'main'}}
-    <div>I am the main element, wheee</div>
-{{/ end of main}}
-
-{{# current == 'config'}}
-    <div>BUT WHO WAS PHONE</div>
-{{/ end of config}}
-
-{{# current == 'export'}}
-    I'm the export screen and everyone loves me
-{{/ end of export}}
+<span>
+    <label for="jobs-textarea">Jobs</label>
+    <textarea id="jobs-textarea" value="{{jobs}}"></textarea>
+</span>
 
 </script>
+
+<script id='ractive-schedule' type='text/ractive'>
+    {{#jobNames}}
+        <ul class='reorderable browsers'>
+            {{#jobHistory[]}}
+        </ul>
+    {{/jobNames}}
+</script>
+
 
 <div id="layout">
     <!-- Menu toggle -->
@@ -60,7 +66,15 @@
     </div>
 
     <div id="main">
-        <div class="content" id="big-box-o-content">
+        <div class="content">
+            <div id="schedule">
+                <div>I am the main element, wheee</div>
+            </div>
+            <div id="config">
+            </div>
+            <div id="export">
+                I'm the export screen and everyone loves me
+            </div>
         </div>
     </div>
 </div>
